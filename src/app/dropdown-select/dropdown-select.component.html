@@ -1,0 +1,9 @@
+<div class="drop-down" (mouseleave)="showDropDown = false">
+  <button class="drop-down-button" (click)="showDropDown=!showDropDown">{{selectedList.length==0?"Select":selectedList.join(",")}}</button>
+  <div class="drop-down-menu" *ngIf="showDropDown">
+    <label *ngFor="let filter of filters">
+      <input type="checkbox" [(ngModel)]="filter.checked" (change)="setSelectedValue(filter.checked,filter)" />
+      <span>{{(filter.name == "First"||filter.name=="Last")? (filter.name + " Name") : filter.name}}</span>
+    </label>
+  </div>
+</div>

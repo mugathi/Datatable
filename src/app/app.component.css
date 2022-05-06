@@ -1,0 +1,49 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.datatable{
+  margin:2rem;
+}
+
+.table{
+width: 100%;
+margin-top: 1rem;
+}
+
+.spacer{
+  height: 3rem;
+}
+
+td{
+    text-align: center;
+}
+
+.search-area{
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text]{
+  width: 40vw;
+  height: 2rem;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+input[type=text]:focus{
+  border: 2px solid rgb(114, 145, 235);
+  outline: none;
+}
+
+.error{
+  color: red;
+  text-align: center;
+}
+
+
+
+
+

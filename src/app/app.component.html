@@ -1,0 +1,22 @@
+<div class="datatable">
+  <div class="search-area">
+    <input type="text" placeholder="Search" (keyup)="onSearchChange($event.target.value)">
+    <app-dropdown-select [filterList]="filters" (selectList)="getFilterList($event)"></app-dropdown-select>
+  </div>
+  <h2 class="error" *ngIf="errorMsg">{{errorMsg}}</h2>
+  <table class="table">
+    <tr class="table-head spacer">
+      <th *ngFor="let name of columnNames">
+        {{name}}
+      </th>
+    </tr>
+    <tr *ngFor="let value of data" class="spacer">
+      <td>{{ value['first'] }}</td>
+      <td>{{ value['title']+" "+value['first']+" "+value['last'] }}</td>
+      <td>{{ value['street'] || value['city'] }}</td>
+      <td>{{ value['date'] }}</td>
+      <td>{{ value['phone'] }}</td>
+      <td><img [src]="value['thumbnail']"></td>
+    </tr>
+  </table>
+</div>
