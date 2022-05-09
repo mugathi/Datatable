@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DropdownSelectComponent } from './dropdown-select/dropdown-select.component';
+import { DatatableComponent } from './datatable/datatable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DropdownSelectComponent
+    DropdownSelectComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule,

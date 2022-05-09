@@ -3,7 +3,7 @@
   <div class="drop-down-menu" *ngIf="showDropDown">
     <label *ngFor="let filter of filters">
       <input type="checkbox" [(ngModel)]="filter.checked" (change)="setSelectedValue(filter.checked,filter)" />
-      <span>{{(filter.name == "First"||filter.name=="Last")? (filter.name + " Name") : filter.name}}</span>
+      <span>{{filter.name}}</span>
     </label>
   </div>
 </div>

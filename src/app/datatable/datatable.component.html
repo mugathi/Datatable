@@ -1,0 +1,27 @@
+<div class="datatable">
+  <div class="search-area">
+    <input type="text" placeholder="Search" (keyup)="onSearchChange($event.target.value)">
+    <app-dropdown-select [filterList]="filters" (selectList)="getFilterList($event)"></app-dropdown-select>
+  </div>
+  <h2 class="error" *ngIf="errorMsg">{{errorMsg}}</h2>
+  <table class="table">
+    <tr class="table-head spacer">
+      <th *ngFor="let name of columnNames">
+        {{name}}
+      </th>
+    </tr>
+    <tr *ngFor="let value of data" class="spacer">
+      <td *ngFor="let field of columnNames">
+        <img *ngIf="field=='Picture'"  src="{{value[field]}}"/>
+        <ng-container *ngIf="field!='Picture'" >{{value[field]}}</ng-container>
+      </td>
+    </tr>
+  </table>
+  <div class="pagination">
+    <button (click)="fetchPreviousPage()" [disabled]="limitNumber==1">Previous</button>
+    <span>{{((limitNumber+9)/10)}}</span>
+    <button (click)="fetchNextPage()">Next</button>
+  </div>
+</div>
+
+

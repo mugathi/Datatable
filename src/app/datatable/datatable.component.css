@@ -1,0 +1,75 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.datatable{
+  margin:2rem;
+}
+
+.table{
+width: 100%;
+margin-top: 1rem;
+}
+
+.spacer{
+  height: 3rem;
+}
+
+td{
+    text-align: center;
+}
+
+.search-area{
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text]{
+  width: 40vw;
+  height: 2rem;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+input[type=text]:focus{
+  border: 2px solid rgb(114, 145, 235);
+  outline: none;
+}
+
+.error{
+  color: red;
+  text-align: center;
+}
+
+.pagination{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.pagination>span{
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.pagination>button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+button:disabled{
+  cursor: not-allowed;
+}
+
